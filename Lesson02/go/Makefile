@@ -48,13 +48,13 @@ clean:
 	rm -rf client
 
 docker-build:
-	docker build -t trainingbypackt/k8s-client-example:go .
+	docker build -t myeung18/k8s-client-example:go .
 
 docker-push:
-	docker push trainingbypackt/k8s-client-example:go
+	docker push myeung18/k8s-client-example:go
 
 k8s-run:
-	kubectl run go-client --image=trainingbypackt/k8s-client-example:go
+	kubectl run go-client --image=myeung18/k8s-client-example:go
 
 k8s-logs:
 	kubectl logs $(shell kubectl get pods --selector=run=go-client -o jsonpath="{.items[0].metadata.name}")

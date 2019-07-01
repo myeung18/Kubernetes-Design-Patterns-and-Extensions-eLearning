@@ -55,7 +55,7 @@ func main() {
 			panic(err.Error())
 		}
 
-		fmt.Printf("There are %d pods in the cluster:\n", len(pods.Items))
+		fmt.Printf("There are %d pods in the cluster for sure ??!!!:\n", len(pods.Items))
 
 		for _, pod := range pods.Items {
 			fmt.Println(pod.Namespace + "/" + pod.Name)
